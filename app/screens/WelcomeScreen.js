@@ -2,17 +2,18 @@ import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
 import AppButton from "../components/AppButton";
+import colors from "../config/colors";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
-      blurRadius={3}
+      blurRadius={2}
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagline}>To Hell with the trash you don't need anymore.</Text>
+        <Text style={styles.tagline}>Collecting trash that prints your cash.</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <AppButton title="Login" />
@@ -43,6 +44,7 @@ const styles = StyleSheet.create({
   },
   tagline: {
     fontSize: 15,
+    color: colors.white,
     fontWeight: "600",
     paddingVertical: 20,
   },
