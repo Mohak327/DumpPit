@@ -1,8 +1,9 @@
 export default {
 	// primary: '#fc5c65',
 	// secondary: '#612d00',
+	// secondary: '#4ecdc4',
 	primary: '#118a0b',
-	secondary: '#4ecdc4',
+	secondary: '#007785',
 	black: '#000',
 	white: '#fff',
 	medium: '#6e6969',

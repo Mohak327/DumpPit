@@ -11,6 +11,7 @@ import Screen from './app/components/Screen';
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
+import ListingsScreen from './app/screens/ListingsScreen';
 
 export default function App() {
   return (
@@ -18,20 +19,7 @@ export default function App() {
     //  <WelcomeScreen />
     // <ListingDetailsScreen/>
     // <MessagesScreen />
-    <AccountScreen />
-
-
-// //Card component
-    // <View style={{
-    //   backgroundColor: '#f8f4f4',
-    //   padding: 20,
-    //   paddingTop: 100,
-    // }}>
-    //   <Card
-    //     title="Red Jacket For Sale"
-    //     subTitle="$100"
-    //     image={require("./app/assets/jacket.jpg")}
-    //   />
-    // </View>
+    // <AccountScreen />
+	<ListingsScreen />
   );
 }
