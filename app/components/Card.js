@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     overflow: "hidden",
     elevation: 3,
+    marginHorizontal: 20,
+    // marginVertical: 20
+
   },
   detailsContainer: {
     padding: 20,
