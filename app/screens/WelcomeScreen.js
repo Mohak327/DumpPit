@@ -13,8 +13,6 @@ function WelcomeScreen(props) {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagline}>Collecting trash that prints your cash.</Text>
-        <Text style={styles.tagline}>Turning trash into cash.</Text>
         <Text style={styles.tagline}>A journey from trash to cash.</Text>
       </View>
       <View style={styles.buttonsContainer}>

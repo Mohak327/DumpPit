@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         width: '100%',
         padding: 15,
-        marginVertical: Constants.statusBarHeight,
+        // marginVertical: Constants.statusBarHeight,
+        marginVertical: 10,
         alignItems: "center"
 
     },
