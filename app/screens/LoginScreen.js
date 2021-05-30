@@ -1,17 +1,13 @@
 import React from 'react';
 import { StyleSheet, Image } from "react-native";
-import { Formik } from "formik";
 import * as Yup from "yup";
 
-import AppButton from './../components/AppButton';
-import AppText from './../components/AppText';
-import AppTextInput from '../components/AppTextInput';
-import ErrorMessage from './../components/ErrorMessage';
-import Screen from './../components/Screen';
+import Screen from '../components/Screen';
+import {SubmitButton, AppFormField, AppForm} from "../components/forms";
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
-    password: Yup.string().required().min(4).label("Password"),
+    password: Yup.string().required().min(5).label("Password"),
 });
 
 function LoginScreen(props) {
@@ -23,45 +19,34 @@ function LoginScreen(props) {
                 source={require("../assets/logo-red.png")}
             />
 
-            <Formik
+            <AppForm
                 initialValues={{ email: '', password: '' }}
                 onSubmit={values => console.log(values)}
                 validationSchema={validationSchema}
             >
-                {({ handleChange, handleSubmit, errors }) => (
-                  <>
-                    <AppTextInput
-                        autoCapitalize="none"
-                        autoCorrect={false}
-                        icon="email"
-                        placeholder="Email"
-                        keyboardType="email-address"
-                        onChangeText={handleChange("email")}
-                    // iOS only
-                        textContent="emailAddress"
-                    />
-                    <ErrorMessage error={errors.email} />
+                <AppFormField
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    icon="email"
+                    name="email"
+                    placeholder="Email"
+                    keyboardType="email-address"
+                    textContent="emailAddress"      // iOS only
+                />
 
-                    <AppTextInput
-                        autoCapitalize="none"
-                        autoCorrect={false}
-                        icon="lock"
-                        placeholder="Password"
-                        secureTextEntry={true}
-                        onChangeText={handleChange("password")}
-                    // iOS only
-                        textContentType="password"
-                    />
-                    <ErrorMessage error={errors.password} />
+                <AppFormField
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    icon="lock"
+                    righticon="eye"
+                    name="password"
+                    placeholder="Password"
+                    secureTextEntry={true}
+                    textContentType="password"      // iOS only
+                />
 
-                    <AppButton
-                        title="Login"
-                        onPress={handleSubmit}
-                    />
-
-                  </>
-                )}
-            </Formik>
+                <SubmitButton title="Login" />
+            </AppForm>
         </Screen>
     );
 }

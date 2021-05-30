@@ -6,17 +6,29 @@ import Constants from 'expo-constants';
 import colors from "../config/colors";
 import defaultStyles from "../config/styles";
 
-function AppTextInput({icon, ...otherProps}) {
+function AppTextInput({icon, righticon, ...otherProps}) {
     return (
         <View style={styles.container}>
-            {icon && <MaterialCommunityIcons
-                        name={icon}
-                        size={20}
-                        color={defaultStyles.colors.medium}
-                        style={styles.icon}
-                    />
+            {icon &&
+                <MaterialCommunityIcons
+                    name={icon}
+                    size={20}
+                    color={defaultStyles.colors.medium}
+                    style={styles.icon}
+                />
             }
-            <TextInput style={defaultStyles.text} {...otherProps}/>
+            <TextInput
+                placeholderTextColor={defaultStyles.colors.medium}
+                style={defaultStyles.text} {...otherProps}
+            />
+            {righticon &&
+                <MaterialCommunityIcons
+                    name={righticon}
+                    size={20}
+                    color={defaultStyles.colors.medium}
+                    style={styles.righticon}
+                />
+            }
         </View>
     );
 }
@@ -30,11 +42,17 @@ const styles = StyleSheet.create({
         padding: 15,
         // marginVertical: Constants.statusBarHeight,
         marginVertical: 10,
-        alignItems: "center"
-
+        alignItems: "center",
     },
     icon: {
         marginRight: 10,
+    },
+    righticon: {
+        position: "absolute",
+        right: 20,
+    },
+    text: {
+        flex: 1
     },
 });
 
