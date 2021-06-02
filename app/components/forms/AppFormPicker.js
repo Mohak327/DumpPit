@@ -1,23 +1,33 @@
-import React from "react";
-import { useFormikContext } from "formik";
+	import React from "react";
+	import { useFormikContext } from "formik";
 
-import AppPicker from "../AppPicker";
-import ErrorMessage from "./ErrorMessage";
+	import AppPicker from "../AppPicker";
+	import ErrorMessage from "./ErrorMessage";
 
-function AppFormPicker({ items, name, placeholder }) {
-  const { errors, setFieldValue, touched, values } = useFormikContext();
+	function AppFormPicker({
+	items,
+	name,
+	numberOfCloumns,
+	PickerItemComponent,
+	placeholder,
+	width,
+	}) {
+	const { errors, setFieldValue, touched, values } = useFormikContext();
 
-  return (
-    <>
-      <AppPicker
-        items={items}
-        onSelectItem={(item) => setFieldValue(name, item)}
-        placeholder={placeholder}
-        selectedItem={values[name]}
-      />
-      <ErrorMessage error={errors[name]} visible={touched[name]} />
-    </>
-  );
-}
+	return (
+	  <>
+		<AppPicker
+			items={items}
+			onSelectItem={(item) => setFieldValue(name, item)}
+			PickerItemComponent = {PickerItemComponent}
+			placeholder={placeholder}
+			selectedItem={values[name]}
+			width={width}
+			numberOfCloumns={numberOfCloumns}
+		/>
+		<ErrorMessage error={errors[name]} visible={touched[name]} />
+	  </>
+	);
+	}
 
-export default AppFormPicker;
+	export default AppFormPicker;

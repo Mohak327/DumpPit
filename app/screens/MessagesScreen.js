@@ -7,32 +7,37 @@ import { ListItem, ListItemSeparator, ListItemDeleteAction } from '../components
 const initialMessages = [
 	{
 		id: 1,
-		title: 'T1',
-		description: 'D1',
+		title: 'Rocket',
+		description: 'Where are you leaf-head?',
 		image: require('../assets/groot.png')
 	},
 	{
 		id: 2,
-		title: 'T2',
-		description: 'D2',
+		title: 'Drax',
+		description: 'Can you see me Groot?',
 		image: require('../assets/groot.png')
 	},
 	{
 		id: 3,
-		title: 'T3',
-		description: 'D3',
+		title: 'Thor',
+		description: 'Up for a trip to Earth, Tree?',
 		image: require('../assets/groot.png')
-	}
+	},
+	{
+		id: 4,
+		title: 'Peter',
+		description: 'Sent you a song 🎶',
+		image: require('../assets/groot.png')
+	},
 ]
 
 function MessagesScreen(props) {
-	const [ messages, setMessages ] = useState(initialMessages)
-	const [ refreshing, setRefreshing ] = useState(false)
+	const [ messages, setMessages ] = useState(initialMessages);
+	const [ refreshing, setRefreshing ] = useState(false);
 
 	const handleDelete = (message) => {
 		// Delete the message form messages
 		setMessages(messages.filter((m) => m.id !== message.id))
-
 		// call the server
 	}
 
@@ -56,12 +61,12 @@ function MessagesScreen(props) {
 				onRefresh={() => {
 					setMessages([
 						{
-							id: 3,
-							title: 'T3',
-							description: 'D3',
+							id: 1,
+							title: 'Rocket',
+							description: 'Where are you leaf-head?',
 							image: require('../assets/groot.png')
-						}
-					])
+						},
+					]);
 				}}
 			/>
 		</Screen>

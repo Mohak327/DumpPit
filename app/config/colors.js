@@ -7,7 +7,7 @@ export default {
 	black: '#000',
 	white: '#fff',
 	dark: '#0c0c0c',
-	medium: '#6e6969',
+	medium: '#bababa',
 	light: '#f8f4f4',
 	danger: '#ff5252',
 	brown: '#5c3112'
