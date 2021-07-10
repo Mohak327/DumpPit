@@ -5,7 +5,7 @@ import colors from '../config/colors';
 export default {
     colors,
     text: {
-        fontSize: 16,
+        fontSize: 15,
         fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
         color: colors.dark,
         // flex: 1,

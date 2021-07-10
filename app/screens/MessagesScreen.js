@@ -66,6 +66,24 @@ function MessagesScreen(props) {
 							description: 'Where are you leaf-head?',
 							image: require('../assets/groot.png')
 						},
+						{
+							id: 2,
+							title: 'Drax',
+							description: 'Can you see me Groot?',
+							image: require('../assets/drax.jpg')
+						},
+						{
+							id: 3,
+							title: 'Thor',
+							description: 'Up for a trip to Earth, Tree?',
+							image: require('../assets/thor.jpg')
+						},
+						{
+							id: 4,
+							title: 'Peter',
+							description: 'Sent you a song 🎶',
+							image: require('../assets/starlord.jpg')
+						},
 					]);
 				}}
 			/>

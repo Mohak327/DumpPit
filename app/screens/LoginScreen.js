@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, Text } from "react-native";
 import * as Yup from "yup";
 
 import Screen from '../components/Screen';
@@ -16,8 +16,10 @@ function LoginScreen(props) {
         <Screen style={styles.container}>
             <Image
                 style={styles.logo}
-                source={require("../assets/logo-red.png")}
+                source={require("../assets/logo-green.png")}
             />
+            <Text style={styles.heading}>DumpPit</Text>
+
 
             <AppForm
                 initialValues={{ email: '', password: '' }}
@@ -53,8 +55,19 @@ function LoginScreen(props) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10
+        padding: 10,
+        // alignItems: 'center',
+        marginBottom: 50,
+        justifyContent: 'center'
     },
+
+    heading: {
+		color: 'green',
+		fontSize: 20,
+		fontWeight: 'bold',
+        alignItems: 'center',
+        paddingLeft: '40%'
+	},
 
     logo: {
         width: 80,

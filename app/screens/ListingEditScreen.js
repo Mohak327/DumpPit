@@ -28,13 +28,13 @@ const categories = [
   {
     backgroundColor: "#fd9644",
     icon: "car",
-    label: "Cars",
+    label: "Vehicles",
     value: 2,
   },
   {
     backgroundColor: "#fed330",
     icon: "camera",
-    label: "Cameras",
+    label: "Electronics",
     value: 3,
   },
   {
@@ -124,6 +124,7 @@ function ListingEditScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+    justifyContent: 'center',
   },
 });
 export default ListingEditScreen;
