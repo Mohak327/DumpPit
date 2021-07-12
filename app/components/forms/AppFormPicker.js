@@ -5,12 +5,12 @@
 	import ErrorMessage from "./ErrorMessage";
 
 	function AppFormPicker({
-	items,
-	name,
-	numberOfCloumns,
-	PickerItemComponent,
-	placeholder,
-	width,
+		items,
+		name,
+		numberOfCloumns,
+		PickerItemComponent,
+		placeholder,
+		width,
 	}) {
 	const { errors, setFieldValue, touched, values } = useFormikContext();
 
@@ -28,6 +28,6 @@
 		<ErrorMessage error={errors[name]} visible={touched[name]} />
 	  </>
 	);
-	}
+}
 
-	export default AppFormPicker;
+export default AppFormPicker;

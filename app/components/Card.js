@@ -1,19 +1,22 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, TouchableWithoutFeedback } from "react-native";
 
 import AppText from "./AppText";
 import colors from "../config/colors";
 
-function Card({ title, subTitle, image }) {
+function Card({ title, subTitle, image, onPress }) {
   return (
-    <View style={styles.card}>
-      <Image style={styles.image} source={image} />
-      <View style={styles.detailsContainer}>
-{/* This AppText, already being a user made component, cannot have styles here, unless we pass an array of styles objects in AppText.js  */}
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
-      </View>
-    </View>
+    <TouchableWithoutFeedback onPress={onPress}>
+		<View style={styles.card}>
+			<Image style={styles.image} source={image} />
+			<View style={styles.detailsContainer}>
+				{/* This AppText, already being a user made component, cannot have styles here, unless we pass an array of styles objects in AppText.js  */}
+				<AppText style={styles.title}>{title}</AppText>
+				<AppText style={styles.subTitle}>{subTitle}</AppText>
+			</View>
+		</View>
+    </TouchableWithoutFeedback>
+
   );
 }
 

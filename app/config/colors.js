@@ -4,6 +4,7 @@ export default {
 	// secondary: '#4ecdc4',
 	primary: '#118a0b',
 	secondary: '#007785',
+	darkgreen: '#249848',
 	black: '#000',
 	white: '#fff',
 	dark: '#0c0c0c',

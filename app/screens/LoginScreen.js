@@ -18,8 +18,7 @@ function LoginScreen(props) {
                 style={styles.logo}
                 source={require("../assets/logo-green.png")}
             />
-            <Text style={styles.heading}>DumpPit</Text>
-
+            {/* <Text style={styles.heading}>DumpPit</Text> */}
 
             <AppForm
                 initialValues={{ email: '', password: '' }}
@@ -56,16 +55,17 @@ function LoginScreen(props) {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
-        // alignItems: 'center',
-        marginBottom: 50,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginBottom: 70,
+        // position: 'absolute',
+		// top: 50,
+		// alignItems: 'center'
     },
 
     heading: {
 		color: 'green',
 		fontSize: 20,
 		fontWeight: 'bold',
-        alignItems: 'center',
         paddingLeft: '40%'
 	},
 
