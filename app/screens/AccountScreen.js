@@ -1,36 +1,38 @@
 import React from 'react';
-import { View, StyleSheet, FlatList } from 'react-native'
-
-import Screen from '../components/Screen';
-import Icon from '../components/Icon';
-import colors from '../config/colors';
+import { View, StyleSheet, FlatList } from 'react-native';
 
 import { ListItem, ListItemSeparator } from '../components/lists';
+import colors from '../config/colors';
+import Icon from '../components/Icon';
+import routes from '../navigation/routes';
+import Screen from '../components/Screen';
 
 const menuItems = [
     {
         title: "My Listings",
         icon: {
             name: "format-list-bulleted",
-            backgroundColor: colors.primary
-        }
+            backgroundColor: colors.primary,
+        },
+        // targetScreen: routes.LISTING_EDIT,
     },
     {
         title: "My Messages",
         icon: {
             name: "email",
-            backgroundColor: colors.secondary
-        }
+            backgroundColor: colors.secondary,
+        },
+        targetScreen: routes.MESSAGES,
     },
-]
+];
 
-function AccountScreen(props) {
+function AccountScreen({ navigation }) {
     return (
         <Screen style={styles.screen}>
             <View style={styles.container}>
                 <ListItem
                     title="Groot"
-                    subTitle="I am Groot."
+                    subTitle="Level 3"
                     image={require('../assets/groot.png')}
                 />
             </View>
@@ -39,7 +41,7 @@ function AccountScreen(props) {
                     data={menuItems}
                     keyExtractor={menuItem => menuItem.title}
                     ItemSeparatorComponent={ListItemSeparator}
-                    renderItem={({ item }) =>
+                    renderItem={({ item }) => (
                         <ListItem
                             title={item.title}
                             IconComponent={
@@ -48,8 +50,10 @@ function AccountScreen(props) {
                                     backgroundColor={item.icon.backgroundColor}
                                 />
                             }
+                            onPress={() => navigation.navigate(item.targetScreen)}
+
                         />
-                    }
+                    )}
                 />
             </View>
             <ListItem
@@ -57,7 +61,7 @@ function AccountScreen(props) {
                 IconComponent={
                     <Icon
                         name="logout"
-                        backgroundColor="#ffe66d"
+                        backgroundColor={colors.danger}
                     />
                 }
             />

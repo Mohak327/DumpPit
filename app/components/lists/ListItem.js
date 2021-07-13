@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
 		marginRight: 10
 	},
 	subTitle: {
-		color: colors.medium
+		color: colors.medium,
+		// fontWeight: "bold"
 	},
 	title: {
 		fontWeight: '500'

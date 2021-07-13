@@ -4,6 +4,8 @@ import { ImageBackground, StyleSheet, View, Image, Text } from 'react-native'
 import AppButton from '../components/AppButton'
 import colors from '../config/colors'
 
+import routes from '../navigation/routes';
+
 function WelcomeScreen({navigation}) {
 	return (
 		<ImageBackground blurRadius={2} style={styles.background} source={require('../assets/background.jpg')}>
@@ -13,8 +15,8 @@ function WelcomeScreen({navigation}) {
 				<Text style={styles.tagline}>A journey from trash to cash.</Text>
 			</View>
 			<View style={styles.buttonsContainer}>
-				<AppButton title='Login' onPress={() => navigation.navigate("Login")} />
-				<AppButton title='Register' color='secondary' onPress={() => navigation.navigate("Register")} />
+				<AppButton title='Login' onPress={() => navigation.navigate(routes.LOGIN)} />
+				<AppButton title='Register' color='secondary' onPress={() => navigation.navigate(routes.REGISTER)} />
 			</View>
 		</ImageBackground>
 	)

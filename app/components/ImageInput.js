@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: colors.light,
         borderRadius: 15,
-        height: 150,
-        width: 150,
+        height: 120,
+        width: 120,
         justifyContent: 'center',
         overflow: "hidden"
     },

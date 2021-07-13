@@ -12,6 +12,7 @@ import RegisterScreen from './app/screens/RegisterScreen'
 
 import Screen from './app/components/Screen'
 import colors from './app/config/colors'
+import routes from './app/navigation/routes';
 
 import * as ImagePicker from 'expo-image-picker'
 import * as Permissions from 'expo-permissions'
@@ -53,7 +54,7 @@ const Link = () => {
 	return (
 		<Button
 			title="Click"
-			onPress={() => navigation.navigate("TweetDetails", {id: 1})}
+			onPress={() => navigation.navigate(routes.TWEET_DETAILS, {id: 1})}
 		/>
 	)
 }
