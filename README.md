@@ -10,6 +10,6 @@ Lvl 6-7: Fruit <br />
 
 Reaching Lvl-7 unlocks a special prize for the user.
 <!-- The ripe fruits are ready to reap. Claim your prize below! -->
-(Ideation going on)
+(UNDER DEVELOPMENT)
 
 
